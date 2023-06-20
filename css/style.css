@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --btn-color: rgb(20, 110, 195);
+}
+
+nav{
+    height: 70px;
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+nav .nav-left, nav .nav-right{
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-left > img{
+    width: 100px;
+}
+
+nav .nav-left > input{
+    height: 40px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    background-color: #eee;
+    margin-left: 10px;
+}
+
+nav .nav-middle{
+ display: flex;
+ align-items: flex-end;
+ padding-bottom: 5px;
+}
+
+nav .nav-middle a{
+    text-decoration: none;
+    color: var(--btn-color);
+    padding: 10px;
+    margin: 0px 10px;
+}
+
+nav .nav-middle a.active{
+    color: royalblue;
+    position: relative;
+}
+nav .nav-middle a.active::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: royalblue;
+}
+
+nav .nav-middle a > i{
+    font-size: 25px;
+}
+
+
+nav .nav-right a{
+  text-decoration: none;
+  color: royalblue;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #eee;
+  display: grid;
+  place-items: center;
+  margin-left: 1rem;
+}
+
+nav .nav-right a > li{
+    font-size: 18px;
+}
+
+.container{
+    background-color: #eee;
+    display: flex;
+}
+
+.container .left-panel {
+    position: sticky;
+    top: 70px;
+    width: 250px;
+    height: calc(100vh - 70px);
+}
+
+.container .left-panel ul{
+    padding: 10px 0px;
+}
+
+.container .left-panel ul li{
+    list-style: none;
+    display: flex;
+    padding: .7rem 1rem;
+    align-items: center;
+    transition: .3s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container .left-panel ul li:hover{
+    background-color: #ddd;
+}
+
+.container .left-panel ul li >p{
+    margin-left: 10px;
+}
+
+.container .left-panel .profile{
+    background: url('../images/pp.png');
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container .left-panel ul li > i{
+    font-size: 20px;
+    color: royalblue;
+}
+
+.container .left-panel ul li > i.fa-calendar-week{
+    color: tomato;
+}
+
+.container .left-panel ul li > i.fa-briefcase{
+    color: green;
+}
+
+.container .left-panel ul li > i.fa-star{
+    color: gold;
+}
+
+.container .left-panel ul li > i.fa-hands-helping{
+    color: indianred;
+}
+
+.container .left-panel .footer-links{
+    padding: 5px 1rem;
+}
+
+.container .left-panel .footer-links a{
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+}
